@@ -1,0 +1,499 @@
+{
+    "info": {
+        "_postman_id": "c1e466c4-d0f1-48bf-a0b5-68ebb8e2ee61",
+        "name": "Megadados",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "cria um cliente",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/",
+                    "path": [
+                        "clientes"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\": \"João Codorninha\",\n  \"email\": \"jlmc@gmail.com\",\n  \"cpf\": \"525.757.018-00\",\n  \"telefone\": \"(11) 99999-9999\",\n  \"endereco\": \"Rua Anatole de Baudot, 210\",\n  \"password\": \"AmoASophia\"\n}"
+                }
+            }
+        },
+        {
+            "name": "cria um produto",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/produtos/",
+                    "path": [
+                        "produtos"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\":\"Creatina MAXTITANIUM\",\n  \"preco\": 80,\n  \"descricao\":\"Creatina com cocaína, treino altamente produtivo (não nos responsabilizamos pelos efeitos colaterais)\"\n}"
+                }
+            }
+        },
+        {
+            "name": "cria uma encomenda",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/",
+                    "path": [
+                        "encomendas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"clienteId\": 1,\n  \"descricao\": \"Pedido insando de cocatinas\",\n  \"produtos\":{\"1\":120},\n  \"localizacaoAtual\":\"São Paulo, São Paulo, São Paulo\"\n}"
+                }
+            }
+        },
+        {
+            "name": "vê clientes",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/",
+                    "path": [
+                        "clientes"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê produtos",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/produtos/",
+                    "path": [
+                        "produtos"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê encomendas",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/",
+                    "path": [
+                        "encomendas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "edita um cliente",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/1",
+                    "path": [
+                        "clientes",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\":\"Eduardo Vaz\",\n  \"email\":\"emendesvaz@gmail.com\",\n  \"senha\":\"AmoATiemi\"\n}"
+                }
+            }
+        },
+        {
+            "name": "edita um produto",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/produtos/1",
+                    "path": [
+                        "produtos",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"descricao\":\"Creatina totalmente saudável, sem cocaína porque o rei cariri foi preso\"\n}"
+                }
+            }
+        },
+        {
+            "name": "edita uma encomendas",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/1",
+                    "path": [
+                        "encomendas",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"descricao\":\"Pedido insano de creatinas totalmente saudáveis\"\n}"
+                }
+            }
+        },
+        {
+            "name": "vê um cliente",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/1",
+                    "path": [
+                        "clientes",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê um produto",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/produtos/1",
+                    "path": [
+                        "produtos",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê uma encomenda",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/",
+                    "path": [
+                        "encomendas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "edita o status de uma encomenda",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/1/status",
+                    "path": [
+                        "encomendas",
+                        "1",
+                        "status"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"status\":\"ENTREGUE\"\n}"
+                }
+            }
+        },
+        {
+            "name": "edita a localização de uma encomenda",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/localizacao",
+                    "path": [
+                        "encomendas",
+                        "localizacao"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"encomendaId\":1,\n    \"localizacao\":\"Curitiba, Paraná\"\n}"
+                }
+            }
+        },
+        {
+            "name": "vê encomendas de um cliente",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/1/encomendas",
+                    "path": [
+                        "clientes",
+                        "1",
+                        "encomendas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê os produtos de uma encomenda",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/1/produtos",
+                    "path": [
+                        "encomendas",
+                        "1",
+                        "produtos"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "vê as localizações de uma encomenda",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/1/localizacao",
+                    "path": [
+                        "encomendas",
+                        "1",
+                        "localizacao"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "deleta um produto",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/produtos/1",
+                    "path": [
+                        "produtos",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "deleta um cliente",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/clientes/1",
+                    "path": [
+                        "clientes",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "deleta uma encomenda",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/encomendas/1",
+                    "path": [
+                        "encomendas",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        }
+    ]
+}
