@@ -4,3 +4,4 @@ bcrypt
 sqlalchemy
 python-dotenv
 pymysql
+gunicorn
